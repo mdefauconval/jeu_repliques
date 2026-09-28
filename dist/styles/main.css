@@ -222,6 +222,7 @@ summary {
   --color-class: rgb(171, 255, 92);
   --color-cultes: rgb(255, 212, 69);
   --font-primary: "rubik";
+  --font-primary-italic: "rubik_italic";
   --font-secundary: "barrio";
 }
 
@@ -759,26 +760,158 @@ ul {
 .player {
   background: var(--color-darkest);
   color: var(--color-light);
+  padding: 5rem 4rem;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: repeat(2, auto);
+  gap: 3rem;
   grid-template-areas: "expl avatar" "defi defi";
 }
 .player__explication {
   grid-area: expl;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.player__title {
+  font-size: 2.5rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.player__description {
+  font-family: var(--font-primary-italic);
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+.player__categories {
+  display: flex;
+  padding-block: 1rem;
+  border-top: 1px dashed grey;
+  border-bottom: 1px dashed grey;
+  gap: 0.4rem;
+}
+.player__category {
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  border: none;
+  padding: 5px;
+  gap: 0.8rem;
+}
+.player__category .btn-label {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+}
+.player__category-action {
+  background-color: rgb(from var(--color-action) r g b/0.8);
+}
+.player__category-comedie {
+  background-color: rgb(from var(--color-comedie) r g b/0.8);
+}
+.player__category-drame {
+  background-color: rgb(from var(--color-drame) r g b/0.8);
+}
+.player__category-sf {
+  background-color: rgb(from var(--color-sf) r g b/0.8);
+}
+.player__category-horreur {
+  background-color: rgb(from var(--color-horreur) r g b/0.8);
+}
+.player__category-anim {
+  background-color: rgb(from var(--color-anim) r g b/0.8);
+}
+.player__category-class {
+  background-color: rgb(from var(--color-class) r g b/0.8);
+}
+.player__category-cultes {
+  background-color: rgb(from var(--color-cultes) r g b/0.8);
+}
+.player__category-aleatoire {
+  background-color: rgb(from grey r g b/0.8);
+}
+.player__icon {
+  width: 30px;
+  aspect-ratio: 1;
+  background-image: url("../images/elts/icon/dark.svg");
+  background-size: 283.2px auto;
+  border-radius: 100%;
+}
+.player__icon-action {
+  background-position: -15px, 27px;
+  background-color: var(--color-action);
+}
+.player__icon-comedie {
+  background-position: -47px, 27px;
+  background-color: var(--color-comedie);
+}
+.player__icon-drame {
+  background-position: -79px, 27px;
+  background-color: var(--color-drame);
+}
+.player__icon-sf {
+  background-position: -111px, 27px;
+  background-color: var(--color-sf);
+}
+.player__icon-horreur {
+  background-position: -143px, 27px;
+  background-color: var(--color-horreur);
+}
+.player__icon-anim {
+  background-position: -175px, 27px;
+  background-color: var(--color-anim);
+}
+.player__icon-class {
+  background-position: -207px, 27px;
+  background-color: var(--color-class);
+}
+.player__icon-cultes {
+  background-position: -239px, 27px;
+  background-color: var(--color-cultes);
+}
+.player__icon-aleatoire {
+  background-color: grey;
 }
 .player__avatar {
   grid-area: avatar;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 0.3fr 0.3fr 2fr 0.3fr;
+  grid-template-rows: 0.2fr 0.3fr 2fr 0.3fr;
+  gap: 1.5rem;
 }
 .player__avatar-title {
   grid-column: span 2;
-  border: 1px solid pink;
+  font-size: 1.6rem;
+  font-family: var(--font-primary-italic);
+  font-weight: 500;
+  margin: 0;
 }
 .player__color {
-  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: var(--font-primary-italic);
+  color: grey;
+  font-size: 0.8rem;
+}
+.player__color-red {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(255, 80, 98);
+  border-radius: 100%;
+}
+.player__color-blue {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(36, 204, 255);
+  border-radius: 100%;
+}
+.player__color-light {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(255, 211, 211);
+  border-radius: 100%;
 }
 .player__perso {
   border: 1px solid red;
@@ -791,13 +924,28 @@ ul {
 .player__customize {
   border: 1px solid green;
   grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .player__mood {
+  opacity: 0.5;
   width: 55px;
   height: 60px;
   background-image: url("../images/avatar/ghoster-red.svg");
   background-size: 58.8px;
+}
+.player__mood-bad {
   background-position: -3px -2px;
+}
+.player__mood-neutral {
+  background-position: -3px -118px;
+}
+.player__mood-good {
+  background-position: -3px -60px;
+}
+.player__mood-verygood {
+  background-position: -3px -176px;
 }
 .player__name {
   grid-column: span 2;
