@@ -1,6 +1,74 @@
-.start {
-  background-image: url("../images/pattern-dark.png");
-  background-repeat: repeat;
-  background-size: 160px 80px;
+.player {
+  background: var(--color-darkest);
+  color: var(--color-light);
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: repeat(2, auto);
+
+  grid-template-areas:
+      "expl avatar"
+      "defi defi";
+
+
+  //------------- titre & explications ----------------
+  &__explication {
+    grid-area: expl;
+  }
+
+
+
+  //--------------------- avatar ----------------------
+  &__avatar {
+    grid-area: avatar;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0.3fr 0.3fr 2fr 0.3fr;
+
+    &-title {
+      grid-column: span 2;
+      border: 1px solid pink;
+    }
+  }
+
+  &__color {
+    border: 1px solid blue;
+  }
+  
+  &__perso {
+    border: 1px solid red;
+    width: 275px;
+    height: 300px;
+    background-image: url("../images/avatar/ghoster-red.svg");
+    background-position: -9px -1px;
+    grid-row: -3;
+  }
+
+  &__customize {
+    border: 1px solid green;
+    grid-row: span 2;
+  }
+     &__mood {
+       //border: 1px solid white;
+       width: 55px;
+       height: 60px;
+       background-image: url("../images/avatar/ghoster-red.svg");
+       background-size: calc(294px * 0.2);
+       background-position: -3px -2px;
+     }
+  
+  &__name { 
+    grid-column: span 2;
+  }
+
+
+
+  
+//----------------------- defi ------------------------
+  &__defi {
+    grid-area: defi;
+  }
+
+
 }
 
