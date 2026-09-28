@@ -1,0 +1,27 @@
+img {
+  inline-size: 100%;
+}
+
+
+body {
+  font-family: var((--font-primary));
+  font-weight: 400;
+  background: var(--color-light);
+  width: 80rem;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

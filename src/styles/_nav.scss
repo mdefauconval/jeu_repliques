@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  padding-block: 1.5rem; 
+  background: var(--color-light);
+
+  &__logo {
+    width: 12%;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 2rem;
+  }
+  &__item {
+    &-accueil {
+      &::before {
+        content: "☀️"; 
+        margin-right: 0.5rem;
+      }
+    }
+    &-jouer {
+      &::before {
+        content: "☀️"; 
+        margin-right: 0.5rem;
+      }
+    }
+    &-classement {
+      &::before {
+        content: "☀️"; 
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__speaking {
+    display: flex;
+    gap: 0.3rem;
+  }
+  &__language {
+    padding: 0.5rem 1rem; 
+    border: 1px dashed grey;
+    &-fr {
+      background: var(--color-primary);
+      border: none;
+    }
+  }
+
+
+
+  //-------------- mobile -----------------
+  
+}
