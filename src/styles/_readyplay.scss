@@ -57,7 +57,7 @@
   }
 
   &__category {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     border-radius: 50px;
     border: none;
@@ -97,6 +97,9 @@
     }
     &-aleatoire {
       background-color: rgb(from grey r g b / 0.8);
+    }
+    &-all {
+      background-color: rgb(from white r g b / 0.8);
     }
   }
 
@@ -140,7 +143,12 @@
       background-color: var(--color-cultes);
     }
     &-aleatoire {
+      background-image: none;
       background-color: grey;
+    }
+    &-all {
+      background-image: none;
+      background-color: white;
     }
   }
 
@@ -287,6 +295,7 @@
     flex-direction: column;
 
     &--value {
+
       height: 5rem;
       background: var(--color-light);
     }
