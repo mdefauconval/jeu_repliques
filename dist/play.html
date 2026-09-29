@@ -98,16 +98,60 @@
 
       <div class="player__name">
         <label for="player-name">Quel est ton nom de joueur ?</label>
-        <input type="text" id="player-name" name="player-name" placeholder="Joueur Inconnu">
+        <input type="text" id="player-name" name="player-name" placeholder="→  Joueur Inconnu">
       </div>
 
       <div class="player__defi">
-        <p class="player__defi player__defi-label">Ton défi :</p>
-        <a href="#" class="player__defi player__defi-btn">Jouer avec ce défi</a>
+        <p class="player__defi player__defi--label">Ton défi :</p>
+        <div class="player__defi player__defi--value"> <a href="#" class="player__defi player__defi--btn">Jouer avec ce défi</a></div>
       </div>
 
     </section>
+
+    <section class="classement">
+
+      <h2 class="classement__title">Classement !</h2>
+
+      <div class="classement__description description">
+        <p class="description__label">Répliques cultes | Classement VF</p>
+        <h3 class="description__title">Les rois du jour</h3>
+      </div>
+
+      <div class="classement__time">
+        <p class="classement__time--label">Prochain podium dévoilé dans ...</p>
+      </div>
+
+      <table class="classement__table">
+        <tr class="classement__table--first participants">
+          <th class="participants__name">QueenKong1990</th>
+          <td class="participants__category">
+            <div class="player__category player__category-all">
+              <div class="player__icon player__icon-all"></div><span class="btn-label">Tous</span>
+            </div>
+          </td>
+          <td class="participants__result">
+            <p class="participants__result--number">96%</p>
+            <div class="participants__result--line"></div>
+          </td>
+         </tr>
+      </table>
+
+    </section>
   </main>
+
+  <footer class="footer">
+    <p class="footer__mention">
+      <img src="images/LOGO-FULL.svg" alt="Logo Movie Kings" class="footer__logo"> 
+      &copy; 2027 Movie Kings
+    </p>
+
+    <ul class="footer__menu">
+      <li class="footer__item footer__item-insta"><a href="#">Instagram</a></li>
+      <li class="footer__item footer__item-tiktok"><a href="#">Tik Tok</a></li>
+      <li class="footer__item footer__item-youtube"><a href="#">YouTube</a></li>
+      <li class="footer__item footer__item-discord"><a href="#">Discord</a></li>
+    </ul>
+  </footer>
 </body>
 
 </html>

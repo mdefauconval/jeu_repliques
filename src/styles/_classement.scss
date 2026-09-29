@@ -1,0 +1,18 @@
+.classement {
+  background-image: url("../images/pattern-dark.png");
+  background-repeat: repeat;
+  background-size: 160px 80px;
+
+  color: var(--color-light);
+
+  padding: 5rem 4rem;
+
+  tr {
+  display: contents;
+}
+  &__table {
+    //background: var(--color-darkest);
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+  }
+}

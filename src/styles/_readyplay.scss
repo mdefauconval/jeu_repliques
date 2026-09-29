@@ -17,7 +17,7 @@
 
   //------------- titre & explications ----------------
   &__explication {
-    border: 2px solid yellow;
+    //border: 2px solid yellow;
     grid-area: expl;
     display: flex;
     flex-direction: column;
@@ -167,14 +167,10 @@
       background: none;
       height: 2.5rem;
 
-      &::before {
-      content: "→";
-      color: var(--color-light);
-      }
-
       &::placeholder {
         color: var(--color-light);
         font-size: 1.5rem;
+        font-weight: 300;
       }
     }
   }
@@ -182,7 +178,7 @@
 
   //--------------------- avatar ----------------------
   &__avatar {
-    border: 1px solid blue;
+    //border: 1px solid blue;
     grid-area: avatar;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -200,7 +196,7 @@
   }
 
   &__color {
-    border: 1px solid pink;
+    //border: 1px solid pink;
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -230,7 +226,7 @@
   }
   
   &__perso {
-    border: 1px solid red;
+    //border: 1px solid red;
     width: 275px;
     height: 300px;
     background-image: url("../images/avatar/ghoster-red.svg");
@@ -240,7 +236,7 @@
   }
 
   &__customize {
-    border: 1px solid green;
+    //border: 1px solid green;
     grid-row: span 2;
 
     font-family: var(--font-primary-italic);
@@ -287,6 +283,20 @@
 //----------------------- defi ------------------------
   &__defi {
     grid-area: defi;
+    display: flex;
+    flex-direction: column;
+
+    &--value {
+      height: 5rem;
+      background: var(--color-light);
+    }
+    &--btn {
+      //height: 3.5rem;
+      background: linear-gradient(0deg, #c27c0c 0%, #ffd323 100%);
+      color: var(--color-dark);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
   }
 
 

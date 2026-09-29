@@ -770,7 +770,6 @@ ul {
   grid-template-areas: "expl avatar" "category name" "defi defi";
 }
 .player__explication {
-  border: 2px solid yellow;
   grid-area: expl;
   display: flex;
   flex-direction: column;
@@ -903,20 +902,17 @@ ul {
   background: none;
   height: 2.5rem;
 }
-.player__name input::before {
-  content: "→";
-  color: var(--color-light);
-}
 .player__name input::-moz-placeholder {
   color: var(--color-light);
   font-size: 1.5rem;
+  font-weight: 300;
 }
 .player__name input::placeholder {
   color: var(--color-light);
   font-size: 1.5rem;
+  font-weight: 300;
 }
 .player__avatar {
-  border: 1px solid blue;
   grid-area: avatar;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -931,7 +927,6 @@ ul {
   margin: 0;
 }
 .player__color {
-  border: 1px solid pink;
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -959,7 +954,6 @@ ul {
   border-radius: 100%;
 }
 .player__perso {
-  border: 1px solid red;
   width: 275px;
   height: 300px;
   background-image: url("../images/avatar/ghoster-red.svg");
@@ -968,7 +962,6 @@ ul {
   margin-inline-start: 2rem;
 }
 .player__customize {
-  border: 1px solid green;
   grid-row: span 2;
   font-family: var(--font-primary-italic);
   color: grey;
@@ -1004,4 +997,31 @@ ul {
 }
 .player__defi {
   grid-area: defi;
+  display: flex;
+  flex-direction: column;
+}
+.player__defi--value {
+  height: 5rem;
+  background: var(--color-light);
+}
+.player__defi--btn {
+  background: linear-gradient(0deg, #c27c0c 0%, #ffd323 100%);
+  color: var(--color-dark);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.classement {
+  background-image: url("../images/pattern-dark.png");
+  background-repeat: repeat;
+  background-size: 160px 80px;
+  color: var(--color-light);
+  padding: 5rem 4rem;
+}
+.classement tr {
+  display: contents;
+}
+.classement__table {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
 }/*# sourceMappingURL=main.css.map */
