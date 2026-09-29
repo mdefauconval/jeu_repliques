@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -32,40 +32,51 @@
 
       <div class="player__explication">
         <h1 class="player__title">Prêt à jouer ?</h1>
-        <p class="player__description">Choisis ton défi dans les catégories suivantes et prépare-toi à reconnaître les répliques les plus cultes du cinéma.</p>
-        <p class="player__label">Choisis une ou plusieurs catégories</p>
-        
+        <p class="player__description">Choisis ton défi dans les catégories suivantes et prépare-toi à reconnaître les
+          répliques les plus cultes du cinéma.</p>
+        <p class="player__label">« Choisis une ou plusieurs catégories »</p>
+
       </div>
 
       <div class="player__categories">
-          <button class="player__category player__category-action">
-            <div class="player__icon player__icon-action"></div><span class="btn-label">Action</span></button>
-          <button class="player__category player__category-comedie">
-            <div class="player__icon player__icon-comedie"></div><span class="btn-label">Comédie</span></button>
-          <button class="player__category player__category-drame">
-            <div class="player__icon player__icon-drame"></div><span class="btn-label">Drame</span></button>
-          <button class="player__category player__category-sf">
-            <div class="player__icon player__icon-sf"></div><span class="btn-label">Science-fiction</span></button>
-          <button class="player__category player__category-horreur">
-            <div class="player__icon player__icon-horreur"></div><span class="btn-label">Horreur</span></button>
-          <button class="player__category player__category-anim">
-            <div class="player__icon player__icon-anim"></div><span class="btn-label">Animation</span></button>
-          <button class="player__category player__category-class">
-            <div class="player__icon player__icon-class"></div><span class="btn-label">Classique</span></button>
-          <button class="player__category player__category-cultes">
-            <div class="player__icon player__icon-cultes"></div><span class="btn-label">Cultes</span></button>
-          <button class="player__category player__category-aleatoire">
-            <div class="player__icon player__icon-aleatoire"></div><span class="btn-label">Aléatoire</span></button>
-          <button class="player__category player__category-all">
-            <div class="player__icon player__icon-all"></div><span class="btn-label">Tous</span></button>
-        </div>
+        <button class="player__category player__category-action">
+          <div class="player__icon player__icon-action"></div><span class="btn-label">Action</span>
+        </button>
+        <button class="player__category player__category-comedie">
+          <div class="player__icon player__icon-comedie"></div><span class="btn-label">Comédie</span>
+        </button>
+        <button class="player__category player__category-drame">
+          <div class="player__icon player__icon-drame"></div><span class="btn-label">Drame</span>
+        </button>
+        <button class="player__category player__category-sf">
+          <div class="player__icon player__icon-sf"></div><span class="btn-label">Science-fiction</span>
+        </button>
+        <button class="player__category player__category-horreur">
+          <div class="player__icon player__icon-horreur"></div><span class="btn-label">Horreur</span>
+        </button>
+        <button class="player__category player__category-anim">
+          <div class="player__icon player__icon-anim"></div><span class="btn-label">Animation</span>
+        </button>
+        <button class="player__category player__category-class">
+          <div class="player__icon player__icon-class"></div><span class="btn-label">Classique</span>
+        </button>
+        <button class="player__category player__category-cultes">
+          <div class="player__icon player__icon-cultes"></div><span class="btn-label">Cultes</span>
+        </button>
+        <button class="player__category player__category-aleatoire">
+          <div class="player__icon player__icon-aleatoire"></div><span class="btn-label">Aléatoire</span>
+        </button>
+        <button class="player__category player__category-all">
+          <div class="player__icon player__icon-all"></div><span class="btn-label">Tous</span>
+        </button>
+      </div>
 
       <div class="player__avatar">
 
         <p class="player__avatar-title">Faisons connaissance !</p>
 
         <div class="player__color">
-          <p   class="player__color-title">couleur</p>
+          <p class="player__color-title">couleur</p>
           <div class="player__color-red"></div>
           <div class="player__color-blue"></div>
           <div class="player__color-light"></div>
@@ -74,19 +85,21 @@
         <div class="player__perso"></div>
 
         <div class="player__customize">
-          <p   class="player__customize-title">humeur</p>
-          <div class="player__mood player__mood-bad"></div>
-          <div class="player__mood player__mood-neutral"></div>
-          <div class="player__mood player__mood-good"></div>
-          <div class="player__mood player__mood-verygood"></div>
+          <p class="player__customize-title">humeur</p>
+          <div class="mood__grid">
+            <div class="player__mood player__mood-bad"></div>
+            <div class="player__mood player__mood-neutral"></div>
+            <div class="player__mood player__mood-good"></div>
+            <div class="player__mood player__mood-verygood"></div>
+          </div>
         </div>
 
       </div>
 
       <div class="player__name">
-          <label for="player-name">Quel est ton nom de joueur ?</label>
-          <input type="text">
-        </div>
+        <label for="player-name">Quel est ton nom de joueur ?</label>
+        <input type="text" id="player-name" name="player-name" placeholder="Joueur Inconnu">
+      </div>
 
       <div class="player__defi">
         <p class="player__defi player__defi-label">Ton défi :</p>
