@@ -6,21 +6,25 @@
 
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
   gap: 3rem;
 
   grid-template-areas:
       "expl avatar"
+      "category name"
       "defi defi";
 
 
   //------------- titre & explications ----------------
   &__explication {
-    //border: 2px solid yellow;
+    border: 2px solid yellow;
     grid-area: expl;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    p {
+      margin: 0;
+    }
   }
 
   &__title {
@@ -35,7 +39,9 @@
     font-size: 1.3rem;
   }
 
+  //------------------ catégories ---------------------
   &__categories {
+    grid-area: category;
     display: flex;
     padding-block: 1rem;
     border-top: 1px dashed grey;
@@ -133,14 +139,34 @@
 
 
 
+  //---------------------- name -----------------------
+  &__name {
+    border: 1px solid red;
+    grid-area: name;
+
+    label {
+      font-family: var(--font-primary-italic);
+      color: grey;
+      font-size: 0.8rem;
+    }
+
+    input {
+      border-radius: 50px;
+      border: none;
+      padding: 5px 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+  }
 
 
   //--------------------- avatar ----------------------
   &__avatar {
+    border: 1px solid blue;
     grid-area: avatar;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 0.2fr 0.3fr 2fr 0.3fr;
+    grid-template-rows: 0.2fr 0.3fr 2fr;
     gap: 1.5rem;
 
     &-title {
@@ -188,12 +214,16 @@
     height: 300px;
     background-image: url("../images/avatar/ghoster-red.svg");
     background-position: -9px -1px;
-    grid-row: -3;
+    grid-row: -2;
   }
 
   &__customize {
     border: 1px solid green;
     grid-row: span 2;
+
+    font-family: var(--font-primary-italic);
+    color: grey;
+    font-size: 0.8rem;
 
     display: flex;
     flex-direction: column;
