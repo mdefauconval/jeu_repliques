@@ -1038,10 +1038,11 @@ ul {
 }
 .classement__participants {
   display: grid;
-  grid-template-columns: 0.2fr 1fr 3fr 0.5fr;
+  grid-template-columns: 0.2fr 1fr 3fr 0.8fr;
   justify-items: start;
   align-items: center;
   padding: 1rem 1.5rem;
+  padding-inline-end: 0;
 }
 .classement .participants__rang {
   color: grey;
@@ -1062,9 +1063,12 @@ ul {
 }
 .classement .participants__result {
   border: 1px solid pink;
-  width: 2rem;
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: end;
 }
 .classement .participants__line {
-  height: 20px;
+  height: 6px;
   background: #585858;
 }/*# sourceMappingURL=main.css.map */
