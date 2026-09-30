@@ -50,6 +50,7 @@
   &__categories {
     grid-area: category;
     display: flex;
+    flex-wrap: wrap;
     padding-block: 1rem;
     border-top: 1px dashed grey;
     border-bottom: 1px dashed grey;
@@ -57,7 +58,7 @@
   }
 
   &__category {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     border-radius: 50px;
     border: none;

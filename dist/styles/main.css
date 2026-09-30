@@ -217,8 +217,8 @@ summary {
   --color-secundary: rgb(243, 58, 77);
   --color-action: rgb(236, 119, 129);
   --color-comedie: rgb(130, 236, 183);
-  --color-drame: rgb(198, 103, 243);
-  --color-sf: rgb(89, 81, 201);
+  --color-drame: rgb(215, 143, 248);
+  --color-sf: rgb(127, 121, 220);
   --color-horreur: rgb(82, 177, 255);
   --color-anim: rgb(231, 160, 101);
   --color-class: rgb(149, 201, 100);
@@ -955,13 +955,14 @@ ul {
 .player__categories {
   grid-area: category;
   display: flex;
+  flex-wrap: wrap;
   padding-block: 1rem;
   border-top: 1px dashed grey;
   border-bottom: 1px dashed grey;
   gap: 0.4rem;
 }
 .player__category {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   border-radius: 50px;
   border: none;
@@ -1190,8 +1191,13 @@ ul {
   color: var(--color-light);
   padding: 5rem 4rem;
 }
+.classement__title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--color-light);
+}
 .classement__table {
-  border: 1px solid red;
   width: 100%;
 }
 .classement__table tr:nth-child(2n-1) {
@@ -1202,7 +1208,7 @@ ul {
 }
 .classement__participants {
   display: grid;
-  grid-template-columns: 0.2fr 1fr 3fr 0.8fr;
+  grid-template-columns: 0.4fr 1fr 3fr 0.8fr;
   justify-items: start;
   align-items: center;
   padding: 1rem 1.5rem;
@@ -1214,25 +1220,76 @@ ul {
 }
 .classement .participants__rang--first {
   color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+.classement .participants__rang--first::after {
+  content: "";
+  background-image: url("../images/elts/icon/crown.png");
+  background-position: -15px -16px;
+  display: inline-flex;
+  width: 30px;
+  aspect-ratio: 1;
+  margin-inline-start: 0.6rem;
 }
 .classement .participants__rang--second {
   color: var(--color-light);
+  display: flex;
+  align-items: center;
+}
+.classement .participants__rang--second::after {
+  content: "";
+  background-image: url("../images/elts/icon/crown.png");
+  background-position: -15px -62px;
+  display: inline-flex;
+  width: 30px;
+  aspect-ratio: 1;
+  margin-inline-start: 0.6rem;
 }
 .classement .participants__rang--third {
-  color: rgb(255, 94, 0);
+  color: rgb(194, 91, 31);
+  display: flex;
+  align-items: center;
+}
+.classement .participants__rang--third::after {
+  content: "";
+  background-image: url("../images/elts/icon/crown.png");
+  background-position: -15px -108px;
+  display: inline-flex;
+  width: 30px;
+  aspect-ratio: 1;
+  margin-inline-start: 0.6rem;
 }
 .classement .participants__name {
   font-weight: 700;
   font-size: 1.2rem;
 }
+.classement .participants__category {
+  color: var(--color-dark);
+  display: flex;
+  gap: 0.5rem;
+}
 .classement .participants__result {
-  border: 1px solid pink;
   width: 8rem;
   display: flex;
   flex-direction: column;
-  justify-items: end;
+  text-align: end;
+}
+.classement .participants__result--number {
+  margin: 0.5rem 0;
+}
+.classement .participants__result--number::after {
+  content: "⭐️";
+  margin-inline-start: 0.5rem;
 }
 .classement .participants__line {
-  height: 6px;
-  background: #585858;
+  height: 5px;
+  background: #454545;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  background: var(--color-primary);
+  height: 5px;
 }/*# sourceMappingURL=main.css.map */

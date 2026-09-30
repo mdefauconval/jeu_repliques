@@ -7,8 +7,15 @@
 
   padding: 5rem 4rem;
 
+  &__title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--color-light);
+  }
+
   &__table {
-    border: 1px solid red;
+    //border: 1px solid red;
     width: 100%;
 
     tr:nth-child(2n-1) { 
@@ -22,7 +29,7 @@
   &__participants {
     //border: 1px solid green;
     display: grid;
-    grid-template-columns: .2fr 1fr 3fr .8fr;
+    grid-template-columns: .4fr 1fr 3fr .8fr;
     justify-items: start;
     align-items: center;
     padding: 1rem 1.5rem;
@@ -36,31 +43,83 @@
 
       &--first {
         color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        &::after {
+          content: "";
+          background-image: url("../images/elts/icon/crown.png");
+          background-position: -15px -16px;
+          display: inline-flex;
+          width: 30px;
+          aspect-ratio: 1;
+          margin-inline-start: .6rem;
+        }
       }
       &--second {
         color: var(--color-light); 
+        display: flex;
+        align-items: center;
+        &::after {
+          content: "";
+          background-image: url("../images/elts/icon/crown.png");
+          background-position: -15px -62px;
+          display: inline-flex;
+          width: 30px;
+          aspect-ratio: 1;
+          margin-inline-start: .6rem;
+        }
       }
       &--third {
-        color: rgb(255, 94, 0);
+        color: rgb(194, 91, 31);
+        display: flex;
+        align-items: center;
+        &::after {
+          content: "";
+          background-image: url("../images/elts/icon/crown.png");
+          background-position: -15px -108px;
+          display: inline-flex;
+          width: 30px;
+          aspect-ratio: 1;
+          margin-inline-start: .6rem;
+        }
       }
     }
     &__name {
       font-weight: 700;
       font-size: 1.2rem;
     }
+    &__category {
+      color: var(--color-dark);
+      display: flex;
+      gap: .5rem;
+    }
 
     &__result {
-      border: 1px solid pink;
+      //border: 1px solid pink;
       width: 8rem;
       display: flex;
       flex-direction: column;
-      justify-items: end;
+      text-align: end;
+
+      &--number {
+        margin: .5rem 0;
+        &::after{
+          content: "⭐️";
+          margin-inline-start: .5rem;
+        }
+      }
 
     }
     &__line {
-      height: 6px;
-      //width: 100%;
-      background: #585858;
+      height: 5px;
+      background: #454545;
+      border-radius: 5px;
+      overflow: hidden;
     }
   }
+}
+
+.fill { 
+  background: var(--color-primary);
+  height: 5px;
 }
