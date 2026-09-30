@@ -10,13 +10,14 @@
   align-items: center;
   position: relative;
   margin-top: 1.5rem;
+  padding-block: 4rem;
 
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgb(25, 163, 168);
-    transform: rotate(-1.5deg) scale(1.03);
+    background: rgb(37, 168, 159);
+    transform: rotate(-1.4deg) scale(1.03);
     z-index: -1;
   }
 
@@ -28,30 +29,37 @@
 
     &-title {
       //border: 1px solid black;
-      width: 30rem;
+      width: 38rem;
       font-weight: 800;
       color: var(--color-light);
       text-shadow: 0px 8px var(--color-dark);
-      font-size: 4rem;
+      font-size: 4.8rem;
       line-height: 0.8;
       margin: 0;
     }
 
     &-description {
       color: var(--color-dark); 
+      font-size: 1.15rem;
+      line-height: 1.5;
       opacity: 0.8;
       margin: 0;
     }
 
     &-btn {
-      padding: 0.5rem 1.5rem;
+      padding: 0.7rem 1.5rem;
       background: linear-gradient(0deg, #c27c0c 0%, #ffd323 100%);
-      border: 5px solid var(--color-dark);
+      border: 6px solid var(--color-dark);
       color: var(--color-dark);
-      font-weight: 900;
-      font-size: 1.5rem;
+      font-weight: 800;
+      font-size: 1.7rem;
       width: 14rem;
+      line-height: 0.9;
       margin: 0;
+
+      &:hover {
+        background: linear-gradient(0deg, #ffd323 0%, #c27c0c 100%);
+      }
     }
   }
 
@@ -59,7 +67,7 @@
     width: 35%; 
     position: relative;
     img {
-      transform: translateX(-5rem) scale(1.4);
+      transform: translate(-8.5rem, -1rem) scale(1.9);
     }
   }
 
@@ -75,15 +83,32 @@
       padding: 3rem;
       margin: 0;
       text-align: center;
+
+
       &-title {
+        //border: 1px solid pink;
         padding: 0;
         line-height: 1;
+
+        &::before {
+          content: "";
+          background-image: url("../images/king-crown.png");
+          display: inline-block;
+          width: 12rem;
+          height: 9.5rem;
+          background-size: 120%;
+          background-position: -18px -45px;
+          margin-inline: auto;
+          //border: 1px solid red;
+          margin-bottom: -20px;
+        }
       }
       &-description {
         padding: 0;
       }
       &-btn {
-        padding: 1rem;
+        font-size: 2rem;
+        padding: 2rem;
       }
     }
   }

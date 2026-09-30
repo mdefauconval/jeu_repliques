@@ -7,7 +7,7 @@
   background: var(--color-light);
 
   &__logo {
-    width: 12%;
+    width: 15%;
   }
 
   &__menu {
@@ -15,22 +15,62 @@
     gap: 2rem;
   }
   &__item {
+    font-size: 1.1rem;
+    font-weight: 300;
+
+    &:hover {
+      border-bottom: 1px dashed #000;
+      &::after {
+        content: "";
+        display: inline-flex;
+        width: 6.5rem;
+        height: .2rem;
+        position: absolute;
+        transform: translateY(23px);
+        border-bottom: 2px dashed var(--color-primary);
+      }
+    }
+
     &-accueil {
+      display: flex;
+      align-items: center;
       &::before {
-        content: "☀️"; 
+        content: "";
+        display: inline-block;
+        background-image: url("../images/elts/icon/icon_nav.svg");
+        height: 40px;
+        width: 40px;
         margin-right: 0.5rem;
+        background-size: auto 180%;
+        background-position: -10px -20px;
       }
     }
     &-jouer {
+      display: flex;
+      align-items: center;
       &::before {
-        content: "☀️"; 
+        content: "";
+        display: inline-block;
+        background-image: url("../images/elts/icon/icon_nav.svg");
+        height: 40px;
+        width: 40px;
         margin-right: 0.5rem;
+        background-size: auto 180%;
+        background-position: -60px -18px;
       }
     }
     &-classement {
+      display: flex;
+      align-items: center;
       &::before {
-        content: "☀️"; 
+        content: "";
+        display: inline-block;
+        background-image: url("../images/elts/icon/icon_nav.svg");
+        height: 40px;
+        width: 40px;
         margin-right: 0.5rem;
+        background-size: auto 180%;
+        background-position: -105px -18px;
       }
     }
   }
@@ -42,9 +82,11 @@
   &__language {
     padding: 0.5rem 1rem; 
     border: 1px dashed grey;
+    opacity: 0.5;
     &-fr {
       background: var(--color-primary);
       border: none;
+      opacity: 1;
     }
   }
 

@@ -1,7 +1,7 @@
 .explication {
   background: var(--color-dark);
   margin-top: 1.5rem;
-  padding: 3rem 4rem;
+  padding: 5rem 5rem;
 
   color: var(--color-light);
   font-weight: 300;
@@ -10,25 +10,26 @@
     color: var(--color-secundary);
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: 0;
   }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
     margin-bottom: 0.5rem;
+    font-weight: 800;
 
     .interrogation {
       &::before {
         content: "";
         background-image: url("../images/king-crown.png");
         display: inline-block;
-        width: 2rem;
-        height: 2rem;
+        width: 4rem;
+        height: 4rem;
         background-size: contain;
-        vertical-align: middle;
-        margin-right: 0.5rem;
+        position: absolute;
+        transform: translate(-23%, -75%);
       }
     }
   }
@@ -36,6 +37,7 @@
   &__description {
     margin: 0;
     margin-bottom: 2.5rem;
+    font-size: 1.2rem;
   }
 
   &__grid {
@@ -47,19 +49,20 @@
   &__card {
     border-top: 0.1px dashed grey;
     border-bottom: 0.1px dashed grey;
-    padding: 1rem;
+    padding: .5rem;
     padding-top: 0rem;
 
     .description {
       margin-top: 0;
+      line-height: 1.4;
     }
 
     .title_first {
       display: flex;
       align-items: center;
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-bottom: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-block: .8rem;
 
 
       &::before {
@@ -74,9 +77,9 @@
     .title_secund {
       display: flex;
       align-items: center;
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-bottom: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-block: .8rem;
 
       &::before {
         content: "2";
@@ -90,9 +93,9 @@
     .title_third {
       display: flex;
       align-items: center;
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-bottom: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-block: .8rem;
 
       &::before {
         content: "3";
@@ -130,7 +133,7 @@
   background-image: url("../images/pattern-red.png");
   background-repeat: repeat;
   background-size: 160px 80px;
-  height: 26rem;
+  height: 25rem;
   z-index: -1;
 
 
@@ -167,7 +170,7 @@
   &__description {
     color: var(--color-dark);
     padding-inline: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0;
     margin-block-end: 2rem;
 
@@ -190,7 +193,6 @@
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     grid-template-rows: repeat(2, auto);
-    gap: 16px;
     align-items: center;
 
     grid-template-areas:
@@ -247,6 +249,10 @@
       color: var(--color-dark);
       font-weight: 700;
       font-size: 1.1rem;
+
+      &:hover {
+        background: linear-gradient(0deg, #ffd323 0%, #c27c0c 100%);;
+      }
     }
   }
 
